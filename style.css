@@ -1,0 +1,96 @@
+
+body {
+    background-color: #121212;
+    color: #110505;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(health.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* The container box */
+.tracker-container {
+    padding: 30px;
+    width: 350px;
+    /*From https://css.glass */
+    background: rgba(225, 217, 217, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    margin: 0 0 5px 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #000000;
+    margin: 0 0 20px 0;
+    font-size: 14px;
+}
+
+.progress-container {
+    background-color: #333;
+    border-radius: 10px;
+    height: 8px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    background-color: #4caf50; /* Green bar */
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.stats {
+    font-size: 12px;
+    color: #000000;
+    margin: 0 0 25px 0;
+    text-align: right;
+}
+
+/* Habit Items List */
+.habit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.habit-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #2d7aa7;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.habit-item:hover {
+    background-color: #043c5c;
+}
+
+.habit-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #4caf50; /* Makes the checkbox go green */
+    cursor: pointer;
+}
+
+
+.habit-checkbox:checked + .habit-text {
+    text-decoration: line-through; /*line after checking smthing*/
+    color: #d7dbe4;
+}
