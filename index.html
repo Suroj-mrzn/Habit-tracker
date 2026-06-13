@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habit <track></track></title>
+    <title>Habit tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,29 +16,42 @@
         </div>
         <p class="stats" id="progressText">0% Completed</p>
 
-        <div class="habit-list">
-            
+  <div class="habit-list" id="habitList">
             <label class="habit-item">
                 <input type="checkbox" class="habit-checkbox">
-                <span class="habit-text">Go for a run</span>
+                <span class="habit-text">Go for a run</span>    
+                <span class="delete-btn">&times;</span> </label>
             </label>
 
             <label class="habit-item">
                 <input type="checkbox" class="habit-checkbox">
                 <span class="habit-text">Practice coding for 30 mins</span>
+                <span class="delete-btn">&times;</span> </label>
             </label>
 
             <label class="habit-item">
                 <input type="checkbox" class="habit-checkbox">
                 <span class="habit-text">Read a book</span>
+                <span class="delete-btn">&times;</span> </label>
             </label>
+
             <label class="habit-item">
                 <input type="checkbox" class="habit-checkbox">
                 <span class="habit-text">Drink lot of water</span>
+                <span class="delete-btn">&times;</span> </label>
             </label>
-
         </div>
-    </div>
+
+        <div class="add-habit-wrapper">
+            <div class="new-habit" id="addHabitBtn" onclick="toggleInputMode()">
+                <span class="habit-text">+ Add a new habit</span>
+            </div>
+            
+            <div class="input-group" id="inputGroup" style="display: none;">
+                <input type="text" id="newHabitInput" placeholder="Type your next habit..." maxlength="40">
+                <button id="submitHabitBtn" onclick="createNewHabit()">Add</button>
+            </div>
+        </div>
     <script src="index.js"></script>
 </body>
 </html>
